@@ -14,4 +14,6 @@
 `This is lab 0`
 ```
 print('the first of many')
+print('many many many')
+print('and many many more')
 ```
