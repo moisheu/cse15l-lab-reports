@@ -7,7 +7,7 @@
   
 ## Table of Contents
 ***
-* Lab 0
+* [Lab 0](https://moisheu.github.io/cse15l-lab-reports//lab-report-1-week-0.html)
 * Lab 1
 * Lab 2
 
@@ -17,3 +17,4 @@ print('the first of many')
 print('many many many')
 print('and many many more')
 ```
+                                  
