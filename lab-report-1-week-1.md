@@ -62,6 +62,9 @@ compiling it again gives you:
 Though effective, scp requires you to enter a password *every time* which can get very redudant and troublesome when you need to do this multiple times. This can be solved by utilizing an ssh key which can take the place of your code: 
 
 ![](lab1sc6.PNG)
+
+Once the key is generated copy the key over to your ieng6 file  using ```mkdir .ssh``` , logout then test and retry compiling WhereAmI.java, and you should find that you no longer have to enter a password as your key does this work for you. 
+
 ![](lab1sc7.PNG)
 
 Lastly, to streamline this process further, you can run commands on the same string by using semicolons:
