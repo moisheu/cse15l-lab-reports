@@ -9,7 +9,7 @@
 ***
 * [Lab 0](https://moisheu.github.io/cse15l-lab-reports//lab-report-1-week-0.html)
 * [Lab 1](https://moisheu.github.io/cse15l-lab-reports//lab-report-1-week-1.html)
-* [Lab 2](https://moisheu.github.io/cse15l-lab-reports//lab-report-2-week-3.md)
+* [Lab 2](https://moisheu.github.io/cse15l-lab-reports//lab-report-2-week-3.html)
 
 `This is lab 0`
 ```
