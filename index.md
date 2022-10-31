@@ -10,7 +10,7 @@
 * [Lab 0](https://moisheu.github.io/cse15l-lab-reports//lab-report-1-week-0.html)
 * [Lab 1](https://moisheu.github.io/cse15l-lab-reports//lab-report-1-week-1.html)
 * [Lab 2](https://moisheu.github.io/cse15l-lab-reports//lab-report-2-week-3.html)
-
+* [Lab 3](https://moisheu.github.io/cse15l-lab-reports//lab-report-3-week-4.html)
 `This is lab 0`
 ```
 print('the first of many')
