@@ -4,6 +4,12 @@ This lab report will demonstrate different usages for command line command ``gre
 ## ``grep -w``
 When appending -w grep will only return exact matches of strings within a file(s).
 
+Example 1:
+
+**What its doing**: when using ```grep -w "Brian"``` it pulls up only exact matches of "Brian", any variations with mixed case-lock will not return regardless if they contain the same letters.
+
+**Why it is useful**: This can be useful for retrieving specific names, case sensitive words, or even code as it will only return the exact case sensitive instances of a string. Further, in this context it returns the line in which it was found so it retrieves "Brian" as well as the context in which they are mentioned making this a highly useful tool for retrieving information as well as also previewing its context. 
+
 **Input**
 
 ```bash 
@@ -18,6 +24,13 @@ At 8:59, Flight 175 passenger Brian David Sweeney tried to call his wife, Julie.
 
 ----
 
+Example 2:
+
+**What its doing**: when using ```grep -w "physician"``` it pulls up only exact matches of "physician", any variations with mixed case-lock will not return regardless if they contain the same letters.
+
+**Why it is useful**: This can be useful for retrieving specific names, case sensitive words, or even code as it will only return the exact case sensitive instances of a string. Though this example is less fruitful in terms of context, it still serves its purpose and usefulness by being able to identify the instances of occurance quickly and efficiently. 
+
+
 **Input**
 
 ```bash 
@@ -31,6 +44,12 @@ physician, Ayman al Zawahiri, arranged from their Afghan headquarters for an Ara
 ```
 ---
 
+Example 3:
+
+**What its doing**: when using ```grep -w "embassies"``` it pulls up only exact matches of "embassies", any variations with mixed case-lock will not return regardless if they contain the same letters.
+
+**Why it is useful**: This can be useful for retrieving specific names, case sensitive words, or even code as it will only return the exact case sensitive instances of a string. Like the aforementioned examples, this returns all instances, case sensitive, with their context. Specifically in this example, it is highly useful by returning multiple instances of "embassies" making this a highly effective tool for finding all instances quickly. 
+
 **Input**
 
 ```bash
@@ -43,22 +62,15 @@ physician, Ayman al Zawahiri, arranged from their Afghan headquarters for an Ara
 organized the bombing of two U.S. embassies. In this chapter, we trace the parallel attach�. Increasingly, the embassies themselves were overshadowed by powerful membassies in Nairobi, Kenya, and Dar es Salaam, Tanzania. Suspicion quickly focused capability to coordinate two nearly simultaneous attacks on U.S. embassies in suggesting imminent Bin Ladin attacks on the U.S. embassies in Qatar and Ethiopia.
 ```
 ---
-**Input**
-
-```bash 
-[cs15lfa22gs@ieng6-201]:911report:253$ grep -w "embass" chapter-3.txt
-```
-
-
-**Output**
-
-```bash
-n/a no output because there are no exact matches. normal grep will return all instances containing "embass"
-```
-----
 
 ## ``cat [file] | grep -wi [text]``
 This command prints out instances of a text within a file by first calling ``cat`` which prints the content of a file, then piping the contents to grep -wi which seeks out instances of string regardless of case 
+
+Example 1:
+
+**What its doing**: when using ```cat chapter-1.txt | grep -wi "scream"``` it first prints out the entirety of chapter-1.txt , taking this output and piping it (basically funneling the results over to the grep portion) where grep will retrieve the instances of "scream" while -wi ensures that grep is retrieving all instances of scream regardless of case. 
+
+**Why it is useful**: This can be useful for retrieving all instances of words regardless of case. Particularly in text files, this can be used to account for human error in forgetting cases and retrieve all instances of an argument. 
 
 
 **Input**
@@ -71,6 +83,13 @@ This command prints out instances of a text within a file by first calling ``cat
 The call ended abruptly. Lee Hanson had heard a woman scream just before it cut off. He turned on a television, and in her home so did Louise Sweeney. Both then saw the second aircraft hit the World Trade Center.
 ```
 ---
+
+Example 2:
+
+**What its doing**: when using ```cat chapter-2.txt | grep -wi "Usama"``` it first prints out the entirety of chapter-2.txt , taking this output and piping it (basically funneling the results over to the grep portion) where grep will retrieve the instances of "Usama" while -wi ensures that grep is retrieving all instances of scream regardless of case. 
+
+**Why it is useful**: This can be useful for retrieving all instances of words regardless of case. Particularly in text files, this can be used to account for human error in forgetting cases and retrieve all instances of an argument. In this example specifically, it demonstrates that -wi does not grab exclusively mixed case or lowercase terms but also cased terms showing the broadness of its usefulness as it does not exclude names, or the start of sentences. 
+
 **Input**
 ```bash 
 [cs15lfa22gs@ieng6-201]:911report:257$ cat chapter-2.txt | grep -wi "Usama"
@@ -82,6 +101,13 @@ In February 1998, the 40-year-old Saudi exile Usama Bin Ladin and a fugitive Egy
                 Bin Ladin's close comrades were more peers than subordinates. For example, Usama
 ```
 ---
+
+Example 3:
+
+**What its doing**: when using ```cat chapter-3.txt | grep -wi "Embassy"``` it first prints out the entirety of chapter-3.txt , taking this output and piping it (basically funneling the results over to the grep portion) where grep will retrieve the instances of "Embassy" while -wi ensures that grep is retrieving all instances of scream regardless of case. 
+
+**Why it is useful**: This can be useful for retrieving all instances of words regardless of case. Particularly in text files, this can be used to account for human error in forgetting cases and retrieve all instances of an argument. In this example specifically, it demonstrates that -wi does not grab exclusively mixed case or lowercase terms but also cased terms showing the broadness of its usefulness as it does not exclude names, or the start of sentences. This case in particular was very generous about providing context as is grep in general, in combination showing all the ways -wi provides the useability in accounting for textual and grammatical contexts retrieving strings regardless of case. 
+
 **Input**
 
 ```bash 
@@ -114,6 +140,12 @@ embassy official was the logical person to represent U.S. interests.
 ## ``grep -n``
 ``grep -n`` finds strings while the ``-n`` will also print out line numbers associated with instances matching the argument. However this is case sensitive. 
 
+Example 1:
+
+**What its doing**: when using ```grep -n "pushed" chapter-1.txt``` it takes all instances of "pushed" and also returns the line number 
+
+**Why it is useful**: This is useful for retrieving instance AND location for easy access and identification if any citing or fixing is needed. 
+
 **Input**
 
 ```bash 
@@ -127,6 +159,13 @@ embassy official was the logical person to represent U.S. interests.
 100:    United 175 pushed back from its gate at 7:58 and departed Logan Airport at 8:14. By 8:33, it had reached its assigned cruising altitude of 31,000 feet. The flight attendants would have begun their cabin service.
 126:    American 77 pushed back from its gate at 8:09 and took off at 8:20. At 8:46, the flight reached its assigned cruising altitude of 35,000 feet. Cabin service would have begun. At 8:51, American 77 transmitted its last routine radio communication. The hijacking began between 8:51 and 8:54. As on American 11 and United 175, the hijackers used knives (reported by one passenger) and moved all the passengers (and possibly crew) to the rear of the aircraft (reported by one flight attendant and one passenger). Unlike the earlier flights, the Flight 77 hijackers were reported by a passenger to have box cutters. Finally, a passenger reported that an announcement had been made by the "pilot" that the plane had been hijacked. Neither of the firsthand accounts mentioned any stabbings or the threat or use of either a bomb or Mace, though both witnesses began the flight in the first-class cabin.
 ```
+
+Example 2:
+
+**What its doing**: when using ```grep -n "God" chapter-2.txt``` it takes all instances of "God" and also returns the line number 
+
+**Why it is useful**: This is useful for retrieving instance AND location for easy access and identification if any citing or fixing is needed. But also useful in identifying proper nouns vs phrases which is shown in this case while providing exact number lines regardless of multiple instances. 
+
 **Input**
 
 ```bash 
@@ -141,6 +180,12 @@ embassy official was the logical person to represent U.S. interests.
 110:                legislation, only prove these rulers to be false Muslims usurping God's authority
 151:                as a struggle between God and Satan. All Muslims-as he defined them-therefore must
 ```
+Example 3:
+
+**What its doing**: when using ```grep -n "Second" chapter-1.txt``` it takes all instances of "Second" and also returns the line number 
+
+**Why it is useful**: This is useful for retrieving instance AND location for easy access and identification if any citing or fixing is needed. In this example grep is default case sensitive thus will return case specific instances of "Second" used as a transition rather than an adjective which can be useful when trying to identify between the two. 
+
 **Input**
 ```bash 
 [cs15lfa22gs@ieng6-201]:911report:273$ grep -n "Second" chapter-3.txt
