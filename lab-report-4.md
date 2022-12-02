@@ -13,24 +13,24 @@ vim <space> <shift>+d <tab> <enter>
 This should look as follows: 
 1) ```vim <space> <shift>+d <tab> <enter>```
   
-![image](1.png)
+![image](5.png)
   
 Which will display:
   
-![image](https://user-images.githubusercontent.com/69376656/201545365-9bb1bf18-2267-4246-9d3d-9f38e9546266.png)
+![image](1.png)
   
 2) /star <enter>
 * the word we are looking for is 'start' however star is sufficient and more efficient to find 'start' 
 
-![image](https://user-images.githubusercontent.com/69376656/201545461-df52fc3a-5480-4618-97ab-52414e92b3be.png)
+![image](2.png)
 
 3) ce base <esc>
  c will delete every character from the current cursor pos (aka where /star took us) to the end of the word (e). 
-![image](https://user-images.githubusercontent.com/69376656/201545694-39f2e789-2e52-4300-a1e5-9fe2a59a0c9c.png)
+![image](6.png)
 
-![image](https://user-images.githubusercontent.com/69376656/201545796-b6471475-9e55-46da-9ac1-3d3ac54030bc.png)
+![image](3.png)
   
-![image](https://user-images.githubusercontent.com/69376656/201550369-cbe7a909-8758-4d14-a02e-51f97ff3c777.png)
+![image](4.png)
 
 3) . n . <shift>+; wq
 This step will repeat step 2 and apply it to the other instances of start
