@@ -2,30 +2,42 @@
 
 ## Part 1
 In lab 6 my partner and I attempted the challenge task as described:
+
 >In DocSearchServer.java, change the name of the start parameter of getFiles, and all of its uses, to instead be called base.
+
 
 To achieve this in the shortest keystrokes possible, we have done the following in order: 
 
-vim <space> <shift>+d <tab> <enter>
-/star <enter> ce base <esc> . n . 
-<shift>+; wq
 
+vim <space> <shift>+d <tab> <enter> /star <enter> ce base <esc> . n . <shift>+; wq
+
+  
+  
 This should look as follows: 
+  
 1) ```vim <space> <shift>+d <tab> <enter>```
+  
   
 ![image](5.png)
   
+  
 Which will display:
+  
   
 ![image](1.png)
   
+  
 2) /star <enter>
 * the word we are looking for is 'start' however star is sufficient and more efficient to find 'start' 
+  
 
 ![image](2.png)
+  
 
 3) ce base <esc>
+  
  c will delete every character from the current cursor pos (aka where /star took us) to the end of the word (e). 
+  
 ![image](6.png)
 
 ![image](3.png)
@@ -42,6 +54,7 @@ As stated in the lab report instructions two strategies were tested two remote e
   
  >- Once, start in Visual Studio Code and make the edit there, then scp the file to the remote server and run it there to confirm it works (you can just run bash test.sh on the remote to test it out). Consider having the appropriate scp command in your command history or easily copy-pasteable!\
  >- Second, start already logged into a ssh session. Then, make the edit for the task you chose in Vim, then exit Vim and run bash test.sh.
+  
   
  **Timing**
   - Strategy 1 had taken me ~4.5 minutes due to the amount of excess typing as well as messing up as a result
