@@ -13,7 +13,7 @@ vim <space> <shift>+d <tab> <enter>
 This should look as follows: 
 1) ```vim <space> <shift>+d <tab> <enter>```
   
-![image](https://user-images.githubusercontent.com/69376656/201545313-6d3575d2-2936-424d-be1a-06f53134cf7a.png)
+![image](1.png)
   
 Which will display:
   
